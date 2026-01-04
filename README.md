@@ -1,50 +1,114 @@
-# Welcome to your Expo app 👋
+# EchoDrop
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+EchoDrop is a mobile application built with React Native and Expo that enables location-based interactions and content sharing.
 
-## Get started
+## 🚀 Features
 
-1. Install dependencies
+- **Cross-Platform**: Built with React Native and Expo, supporting iOS, Android, and Web
+- **Firebase Integration**: 
+  - Authentication for user management
+  - Firestore database for real-time data
+  - Cloud Storage for media files
+- **Modern UI**: 
+  - Dark mode support
+  - Smooth animations with react-native-reanimated
+  - Haptic feedback for better user experience
+- **Location Services**: Integration with react-native-maps for location-based features
+- **Type-Safe**: Built with TypeScript for better code quality and developer experience
 
+## 📱 Tech Stack
+
+- **Framework**: React Native with Expo (~54.0.20)
+- **Navigation**: Expo Router with file-based routing
+- **Backend**: Firebase (Authentication, Firestore, Storage)
+- **UI**: React Navigation, Expo Image, SF Symbols
+- **Maps**: react-native-maps
+- **Language**: TypeScript
+
+## 🛠️ Setup
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm or yarn
+- Expo CLI
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/xroachx-ghost/EchoDrop.git
+   cd EchoDrop
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Configure Firebase:
+   - Copy `.env.example` to `.env`
+   - Fill in your Firebase credentials from [Firebase Console](https://console.firebase.google.com/)
    ```bash
-   npx expo start
+   cp .env.example .env
    ```
 
-In the output, you'll find options to open the app in a
+4. Start the development server:
+   ```bash
+   npm start
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🏃 Running the App
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **iOS Simulator**: Press `i` in the terminal or run `npm run ios`
+- **Android Emulator**: Press `a` in the terminal or run `npm run android`
+- **Web Browser**: Press `w` in the terminal or run `npm run web`
+- **Physical Device**: Scan the QR code with Expo Go app
 
-## Get a fresh project
+## 📂 Project Structure
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+EchoDrop/
+├── app/                    # Application screens (file-based routing)
+│   ├── (tabs)/            # Tab-based navigation
+│   │   ├── index.tsx      # Home screen
+│   │   ├── explore.tsx    # Explore screen
+│   │   └── _layout.tsx    # Tab layout configuration
+│   ├── _layout.tsx        # Root layout
+│   └── modal.tsx          # Modal screen
+├── components/            # Reusable components
+│   ├── ui/               # UI components (icons, collapsibles)
+│   ├── themed-text.tsx   # Theme-aware text component
+│   └── themed-view.tsx   # Theme-aware view component
+├── hooks/                # Custom React hooks
+├── constants/            # App constants (colors, fonts)
+├── src/
+│   └── lib/
+│       └── firebase.ts   # Firebase configuration
+└── assets/              # Images, fonts, and other static files
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 🧪 Development
 
-## Learn more
+- **Linting**: `npm run lint`
+- **Type Checking**: `npx tsc --noEmit`
 
-To learn more about developing your project with Expo, look at the following resources:
+## 🔒 Security
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Firebase credentials are managed through environment variables. Never commit your `.env` file to version control. Use the `.env.example` file as a template.
 
-## Join the community
+## 🤝 Contributing
 
-Join our community of developers creating universal apps.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## 📄 License
+
+This project is private and proprietary.
+
+## 📞 Support
+
+For issues and questions, please open an issue in the GitHub repository.
